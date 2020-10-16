@@ -34,21 +34,25 @@
                                        @if($users->count())
                                         <table class="min-w-full divide-y divide-gray-200">
                                             <thead>
-                                            <tr>
-                                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 tracking-wider">
-                                                    Nombre
-                                                </th>
-                                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                                    Equipo
-                                                </th>
-                                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                                   Estado
-                                                </th>
-                                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                                    Rol
-                                                </th>
-                                                <th class="px-6 py-3 bg-gray-50"></th>
-                                            </tr>
+                                                <tr>
+
+{{--                                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 tracking-wide">--}}
+{{--                                                        Apodo--}}
+{{--                                                    </th>--}}
+                                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                                       Avatar    Apódo   Nombre
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                                        Equipo
+                                                    </th>
+                                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                                       Estado
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                                        Rol
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-gray-50"></th>
+                                                </tr>
                                             </thead>
                                             <tbody class="bg-white divide-y divide-gray-200">
                                             @foreach($users as $user)
@@ -57,6 +61,11 @@
                                                     <div class="flex items-center">
                                                         <div class="flex-shrink-0 h-10 w-10">
                                                             <img class="h-10 w-10 rounded-full" src="{{$user->profile_photo_url}}" alt="{{$user->name}}}}">
+                                                        </div>
+                                                        <div class="ml-4">
+                                                            <div class="text-sm leading-5 font-medium text-gray-900">
+                                                                {{ $user->nickname }}
+                                                            </div>
                                                         </div>
                                                         <div class="ml-4">
                                                             <div class="text-sm leading-5 font-medium text-gray-900">

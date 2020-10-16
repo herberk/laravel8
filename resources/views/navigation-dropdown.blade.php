@@ -18,6 +18,9 @@
                     <x-nav-link href="{{ route('users') }}" :active="request()->routeIs('users')">
                         {{ __('Users') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('todos') }}" :active="request()->routeIs('todos')">
+                        {{ __('Todo') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -114,6 +117,9 @@
 
             <x-jet-responsive-nav-link href="{{ route('users') }}" :active="request()->routeIs('Users')">
                 {{ __('Users') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('todos') }}" :active="request()->routeIs('Todos')">
+                {{ __('Todo') }}
             </x-jet-responsive-nav-link>
         </div>
 

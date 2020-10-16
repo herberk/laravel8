@@ -73,6 +73,7 @@
     "Manage Role": "Administrar rol",
     "Manage Team": "Administrar equipo",
     "Name": "Nombre",
+    "Nickname": "Apodo",
     "Nevermind": "Olvidar",
     "New Password": "Nueva contraseña",
     "Not Found": "No encontrado",
@@ -176,6 +177,7 @@
     "You may not delete your personal team.": "No se puede borrar su equipo personal.",
     "You may not leave a team that you created.": "No se puede abandonar un equipo que usted creó.",
     "Your email address is not verified.": "Su dirección de correo electrónico no está verificada.",
-    "Users": "Usuarios"
-
+    "Users": "Usuarios",
+    "Todo": "Tareas",
+    "Choose": "Seleccione"
 }

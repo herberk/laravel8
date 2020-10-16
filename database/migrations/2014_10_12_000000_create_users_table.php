@@ -13,23 +13,23 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-//        Schema::create('users', function (Blueprint $table) {
-//            $table->id();
-//            $table->string('nickname')->unique()->nullable();
-//            $table->string('name');
-//            $table->string('email')->unique();
-//            $table->timestamp('email_verified_at')->nullable();
-//            $table->string('password');
-//            $table->string('role');
-//            $table->rememberToken();
-//            $table->foreignId('current_team_id')->nullable();
-//            $table->text('profile_photo_path')->nullable();
-//            $table->boolean('active')->default(true);
-//            $table->timestamps();
-//            $table->timestamp('last_logged_at')->nullable();
-//            $table->softDeletes();
-//        });
         Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('nickname')->nullable();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+ //           $table->string('role');
+            $table->rememberToken();
+            $table->foreignId('current_team_id')->nullable();
+            $table->text('profile_photo_path')->nullable();
+            $table->boolean('active')->default(true);
+            $table->timestamps();
+            $table->timestamp('last_logged_at')->nullable();
+            $table->softDeletes();
+        });
+ /*       Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
@@ -37,7 +37,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-        });
+        });*/
     }
 
     /**

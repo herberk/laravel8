@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Livewire\Todo\ListComponent;
 use App\Http\Livewire\UsersTable;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +25,15 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])
     ->get('/users', UsersTable::class)
     ->name('users');
+
+/*Route::middleware(['auth:sanctum', 'verified'])
+    ->get('/todos', ListComponent::class)
+    ->name('todos');*/
+
+// Livewire Todo Application Routes
+/*Route::get('todo', function(){
+    return view('livewire.todo.base', []);
+});*/
+Route::middleware(['auth:sanctum', 'verified'])->get('/todos', function () {
+    return view('base');
+})->name('todos');
