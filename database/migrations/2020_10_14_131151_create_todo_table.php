@@ -18,6 +18,9 @@ class CreateTodoTable extends Migration
             $table->string('title', 100);
             $table->longText('desc')->nullable();
             $table->string('status')->default('pending');
+            $table->integer('empresas_id')->unsigned();
+            $table->foreign('empresas_id')->references('id')->on('empresas');
+            $table->date('fevento')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

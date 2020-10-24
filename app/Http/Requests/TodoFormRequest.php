@@ -27,6 +27,8 @@ class TodoFormRequest extends FormRequest
             'title' => 'required',
             'desc' => 'nullable',
             'status' => 'required',
+            'empresas_id'=> 'required',
+            'fevento' => 'date_format:"Y-m-d"|required',
         ];
     }
 
@@ -35,6 +37,10 @@ class TodoFormRequest extends FormRequest
         return [
             'title.required' => 'Se requiere el titulo.',
             'status.required' => 'Seleccione estado',
+            'empresas_id.required' => 'Seleccione una empresa',
+            'fevento.date'   =>  'No es fecha valida',
+            'fevento.required'   =>  'No es fecha requerida',
+            'fevento.date_format'   =>  'No es fecha bien formateada',
         ];
     }
 }

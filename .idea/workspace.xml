@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="626afe8b-6e51-456c-9fb1-9c3ef8cf2d7c" name="Default Changelist" comment="" />
+    <list default="true" id="626afe8b-6e51-456c-9fb1-9c3ef8cf2d7c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Download errors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Download errors.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Todo/ListComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Todo/ListComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/TodoModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TodoModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_14_131151_create_todo_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_131151_create_todo_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/todo/base.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/todo/create_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/todo/create_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/todo/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/todo/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users.blade.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +24,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -140,9 +157,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -213,6 +231,11 @@
       <workItem from="1602597441607" duration="69000" />
       <workItem from="1602597515315" duration="11309000" />
       <workItem from="1602680871841" duration="3992000" />
+      <workItem from="1602944253725" duration="232000" />
+      <workItem from="1602944561085" duration="243000" />
+      <workItem from="1602944841929" duration="2648000" />
+      <workItem from="1603029055292" duration="4951000" />
+      <workItem from="1603061597759" duration="2725000" />
     </task>
     <servers />
   </component>
@@ -220,11 +243,27 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="759" y="190" key="FileChooserDialogImpl" timestamp="1602597512564">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="459" y="0" key="#Plugins" timestamp="1602944743903">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="459" y="0" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1602944743903" />
+    <state x="459" y="1" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602945279982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="459" y="1" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602945279982" />
+    <state x="548" y="81" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602944467297">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="81" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1602944467297" />
+    <state x="575" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603033527191">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="575" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603033527191" />
+    <state x="729" y="182" key="FileChooserDialogImpl" timestamp="1602949255123">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="648" y="161" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602284658145" />
-    <state x="729" y="182" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601817307482" />
+    <state x="729" y="182" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602949255123" />
     <state x="759" y="190" key="FileChooserDialogImpl/0.0.1600.860/-1600.128.1600.860@0.0.1600.860" timestamp="1602597512564" />
     <state width="1309" height="155" key="GridCell.Tab.0.bottom" timestamp="1601756087538">
       <screen x="0" y="0" width="1536" height="824" />
@@ -242,5 +281,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1309" height="155" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601756087538" />
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1602945470441">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1602945470441" />
   </component>
 </project>

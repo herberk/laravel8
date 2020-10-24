@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Todo;
 
 use Livewire\Component;
+use App\Models\empresas;
 use Log;
 use App\Http\Requests\TodoFormRequest;
 use DB;
@@ -12,17 +13,20 @@ use Exception;
 class FormComponent extends Component
 {
 
-    public $submit_btn_title = "Guardar Tarea";
+    public $submit_btn_title = "Nueva Tarea";
     public $form = [
         "todo_id" => NULL,
         "title" => "",
         "desc" => "",
         "status" => "",
+        "empresas_id" =>"",
+        "fevento"   =>"",
     ];
 
     public $listeners = [
         "edit" => "edit"
     ];
+
 
     public function mount(){
 
@@ -49,6 +53,9 @@ class FormComponent extends Component
                 "title" => $validated_data["title"],
                 "desc" => $validated_data["desc"],
                 "status" => $validated_data["status"],
+                "empresas_id" => $validated_data["empresas_id"],
+//                "fevento"   =>  $validated_data["fevento"],
+                 "fevento" => DATE_FORMAT( date_create($validated_data["fevento"]),"Y/m/d H:i:s"),
             ];
 
             $condition = [
@@ -68,9 +75,9 @@ class FormComponent extends Component
         if($info["success"]){
             $type = "success";
             if($info["todo"]->wasRecentlyCreated){
-                $message = "Nueva tarea creada con éxito.";
+                $message = "Nueva tarea creada, correctamente";
             }else{
-                $message = "Tarea actualizada correctamente";
+                $message = "Tarea actualizada, corretamente";
             }
 
             $this->submit_btn_title = "Guardar Tarea";
@@ -87,6 +94,10 @@ class FormComponent extends Component
 
     public function render()
     {
-        return view('livewire.todo.create_form');
+        return view('livewire.todo.create_form',[
+            'empresas' => empresas::where('active',"1")->get(),
+            'todos' => TodoModel::with('empresas')
+               ->get(),
+        ] );
     }
 }

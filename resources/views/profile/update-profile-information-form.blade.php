@@ -51,7 +51,7 @@
                 <x-jet-input-error for="photo" class="mt-2" />
             </div>
         @endif
-    <!-- Name -->
+    <!-- nickname -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="nickname" value="{{ __('Nickname') }}" />
             <x-input id="nickname" type="text" class="mt-1 block w-full" wire:model.defer="state.nickname" autocomplete="nickname" />
@@ -61,14 +61,14 @@
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="name" value="{{ __('Name') }}" />
             <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
-            <x-jet-input-error for="name" class="mt-2" />
+            <x-input-error for="name" class="mt-2" />
         </div>
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="email" value="{{ __('Email') }}" />
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
-            <x-jet-input-error for="email" class="mt-2" />
+            <x-input-error for="email" class="mt-2" />
         </div>
     </x-slot>
 

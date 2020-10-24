@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\Todo;
 
+
+use App\Models\empresas;
 use Livewire\WithPagination;
 use Livewire\Component;
 use Log;
@@ -11,8 +13,13 @@ class ListComponent extends Component
 {
 
     use WithPagination;
+    protected $queryString = [
+        'search'=>['except'=>''],
+        'perPage'=>['except'=>'5']
+    ];
 
     public $objects = [];
+
 
 //   public $paginator = [];
 
@@ -26,8 +33,11 @@ class ListComponent extends Component
         "load_list" => "loadList"
     ];
 
+    public $search= '';
+    public $perPage = '5';
+
     public $filter = [
-        "search" => "",
+//        "search" => "",
         "status" => "",
         "order_field" => "",
         "order_type" => "",
@@ -36,7 +46,7 @@ class ListComponent extends Component
     protected $updatesQueryString = ['page'];
 
     public function mount(){
-        $this->loadList();
+       $this->loadList();
     }
 
     public function loadList(){
@@ -51,12 +61,12 @@ class ListComponent extends Component
         $objects = TodoModel::where($query);
 
         // Search
-        if(!empty($this->filter["search"])){
+     /*   if(!empty($this->filter["search"])){
             $filter = $this->filter;
             $objects = $objects->where(function ($query) use ($filter) {
                 $query->where('title', 'LIKE', $this->filter['search'] . '%');
             });
-        }
+        }*/
 
         // Ordering
         if(!empty($this->filter["order_field"])){
@@ -74,7 +84,7 @@ class ListComponent extends Component
     }
 
     // Pagination Method
-    public function applyPagination($action, $value, $options=[]){
+   /* public function applyPagination($action, $value, $options=[]){
 
         if( $action == "previous_page" && $this->page > 1){
             $this->page-=1;
@@ -89,12 +99,23 @@ class ListComponent extends Component
         }
 
         $this->loadList();
-    }
+    }*/
 
     public function render()
     {
         return view('livewire.todo.list',[
-        'todos' => TodoModel::paginate(5),
+        'empresas' => empresas::where('active',"1")->get(),
+        'todos' => TodoModel::with('empresas')
+        ->where('title','LIKE',"%{$this->search}%")
+            ->orwhere('desc','LIKE',"%{$this->search}%")
+            ->paginate($this->perPage),
             ] );
+
+    }
+    public function clear(){
+        $this->search='';
+         $this->page = 1;
+        $this->perPage = '5';
     }
 }
+

@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->truncateTables([
-//            'users',
+            'users',
+           'empresas'
           /*  'user_profiles',
             'user_skill',
             'skills',
@@ -28,6 +29,7 @@ class DatabaseSeeder extends Seeder
             SkillSeeder::class,
             TeamSeeder::class,*/
             UserSeeder::class,
+            EmpresasTableSeeder::class,
         ]);
     }
 
